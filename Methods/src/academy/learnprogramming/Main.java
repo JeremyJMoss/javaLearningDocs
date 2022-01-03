@@ -35,7 +35,7 @@ public class Main {
         if (playerScore >= 1000) {
             return 1;
         }
-        else if (playerScore >= 500){
+        else if (playerScore >= 500) {
             return 2;
         }
         else if (playerScore >= 100) {
