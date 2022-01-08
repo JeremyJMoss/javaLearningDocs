@@ -3,20 +3,18 @@ package academy.learnprogramming;
 public class Main {
 
     public static void main(String[] args) {
-	    int count = 0;
-        int sum = 0;
-        for (int i = 1; i <=1000; i++){
-            if (i % 3 == 0 && i % 5 == 0) {
-                count++;
-                System.out.println(i + " is divisible by 3 and 5");
-                sum += i;
-                if (count == 5) {
-                    break;
-                }
-            }
-        }
-        System.out.println("The sum of the numbers was " + sum);
+        System.out.println(sumDigits(10985));
     }
 
-
+    public static int sumDigits(int number){
+        if (number < 10){
+            return -1;
+        }
+        int sum = 0;
+        while (number > 0){
+            sum += number % 10;
+            number /= 10;
+        }
+        return sum;
+    }
 }
